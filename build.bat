@@ -6,7 +6,7 @@ if not exist lib\mongodb-driver-sync-5.11.1.jar (
   exit /b 1
 )
 if not exist out mkdir out
-javac -encoding UTF-8 -cp "lib\*" -sourcepath src -d out "src\com\networkgame\Launcher.java" "src\com\networkgame\server\DatabaseStatus.java"
+javac -encoding UTF-8 -cp "lib\*" -sourcepath src -d out "src\com\networkgame\Launcher.java" "src\com\networkgame\server\DatabaseStatus.java" "src\com\networkgame\server\DatabaseSnapshot.java"
 if errorlevel 1 exit /b 1
 if not exist client-game mkdir client-game
 jar --create --file "client-game\PoliceRobberClient.jar" --main-class com.networkgame.client.ClientLauncher -C out com/networkgame/client

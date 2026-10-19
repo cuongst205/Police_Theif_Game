@@ -75,7 +75,7 @@ Tai lieu: https://www.mongodb.com/docs/drivers/java/sync/current/
 
 ## File local khong dua len GitHub
 
-`data/` (tai khoan va database), `mongodb/bin/` (runtime tai ve), `out/`,
+`data/` (file database dang chay), `mongodb/bin/` (runtime tai ve), `out/`,
 log va ket qua kiem thu tam duoc loai bang `.gitignore`.
 Neu clone repo tren may Server moi, cai MongoDB Community Server hoac chay
 `python installers/download_server.py` tren Windows de tai runtime chinh thuc.
@@ -84,3 +84,11 @@ va `run-server.bat`. Script cai Windows service dung duong dan trong
 `mongodb/mongod.cfg`; can sua duong dan neu dat project o vi tri khac.
 
 Bao cao cuoi va so do nam trong `Thanh_vien_3/`; file de bai goc duoc giu lai.
+
+## Du lieu test da cong khai
+
+Ban xuat day du MongoDB nam trong `database/seed/`, bao gom tai khoan test,
+passwordHash, lich su tran, metadata va index. Xem `database/README.md`.
+Tren may Server moi, khoi dong MongoDB, chay `build.bat`, sau do
+`restore-database.bat` vao database rong truoc khi mo `run-server.bat`.
+Chay `export-database.bat` de cap nhat snapshot tu database local.
