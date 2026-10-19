@@ -1,0 +1,35 @@
+# Local account data, MongoDB database files and backups
+/data/
+/.cleanup-backup/
+
+# Downloaded MongoDB runtime; keep configuration and download script
+/mongodb/*
+!/mongodb/mongod.cfg
+/installers/*.msi
+/installers/*.zip
+/installers/*.part
+
+# Build output and generated verification files
+/out/
+/visual-check/
+/member3_render/
+/member3_assets/
+/member3_content.html
+/Thanh_vien_3.docx
+/client-package-test-*/
+/mongo-migration-test-*/
+/move-test-*/
+*.log
+*.class
+__pycache__/
+
+# Local credentials and editor metadata
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
